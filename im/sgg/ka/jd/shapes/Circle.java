@@ -11,11 +11,13 @@ public class Circle extends Shape {
 
     @Override
     public void draw(Graphics g){
+        int x=30, y=110, size=140, stroke=5;
+
         Graphics2D g2 = (Graphics2D) g;
-        g2.setStroke(new BasicStroke((float) 5));
+        g2.setStroke(new BasicStroke((float) stroke));
         g2.setColor(Color.red);
-        g2.drawOval(80,130,140,140);
-        g2.fillOval(90,140,120,120);
+        g2.drawOval(x,y,size,size);
+        g2.fillOval(x+stroke*2,y+stroke*2,size-stroke*4,size-stroke*4);
 
     }
 

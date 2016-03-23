@@ -11,11 +11,16 @@ public class Triangle extends Shape {
 
     @Override
     public void draw(Graphics g){
+        int x=420, y=250, size=140, stroke=5;
+
         Graphics2D g2 = (Graphics2D) g;
         g2.setStroke(new BasicStroke((float) 5));
         g2.setColor(Color.blue);
-        g2.drawPolygon(new int[]{380,450,520},new int[]{270,130,270},3);
-        g2.fillPolygon(new int[]{397,450,503},new int[]{260,155,260},3);
+        g2.drawPolygon(new int[]{x,x+size/2,x+size},new int[]{y,y-size,y},3);
+        g2.fillPolygon(
+                new int[]{x+(int)(stroke*3.5),x+size/2,x+size-(int)(stroke*3.5)},
+                new int[]{y-stroke*2,y-size+stroke*5,y-stroke*2},3
+        );
 
     }
 }
