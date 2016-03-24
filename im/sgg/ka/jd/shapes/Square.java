@@ -7,17 +7,21 @@ import java.awt.*;
  * Java Developer lessons
  * kademika.com
  */
-public class Square extends Shape {
+public class Square extends Rectangle {
+    private int x, y, size, stroke;
+    private Color color;
+
+    public Square() {
+        this.x = 230;
+        this.y = 30;
+        this.size = 140;
+        this.stroke = 5;
+        this.color=Color.yellow;
+    }
 
     @Override
-    public void draw(Graphics g){
-        int x=230, y=30, size=140, stroke=5;
-
-        Graphics2D g2 = (Graphics2D) g;
-        g2.setStroke(new BasicStroke((float) stroke));
-        g2.setColor(Color.yellow);
-        g2.drawRect(x,y,size,size);
-        g2.fillRect(x+stroke*2,y+stroke*2,size-stroke*4,size-stroke*4);
-
+    public void draw(Graphics g) {
+        Rectangle r = new Rectangle(this.x,this.y,this.size,this.size,this.stroke,this.color);
+        r.draw(g);
     }
 }
