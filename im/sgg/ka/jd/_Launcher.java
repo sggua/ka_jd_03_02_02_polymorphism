@@ -22,7 +22,7 @@ public class _Launcher {
         glyph.draw();
 
         Glyph glyph2 = new GlyphNpe();
-        glyph.draw();
+        glyph.draw(111);
 
     }
 }
