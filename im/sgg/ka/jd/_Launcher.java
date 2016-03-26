@@ -1,6 +1,7 @@
 package im.sgg.ka.jd;
 
 import im.sgg.ka.jd.constructors.Glyph;
+import im.sgg.ka.jd.constructors.GlyphNpe;
 import im.sgg.ka.jd.constructors.RoundGlyph;
 import im.sgg.ka.jd.shapes.*;
 
@@ -18,6 +19,9 @@ public class _Launcher {
 //        new ShapesTemplate(shapes);
 
         Glyph glyph = new RoundGlyph(10);
+        glyph.draw();
+
+        Glyph glyph2 = new GlyphNpe();
         glyph.draw();
 
     }
