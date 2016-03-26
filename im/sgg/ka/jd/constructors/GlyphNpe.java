@@ -10,6 +10,6 @@ public class GlyphNpe extends Glyph{
 
     @Override
     public void draw() {
-        System.out.println(str.length());111
+        System.out.println(str.length());
     }
 }
