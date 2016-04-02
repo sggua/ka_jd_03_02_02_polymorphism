@@ -8,20 +8,13 @@ import java.awt.*;
  * kademika.com
  */
 public class Square extends Rectangle {
-    private int x, y, size, stroke;
-    private Color color;
 
     public Square() {
-        this.x = 230;
-        this.y = 30;
-        this.size = 140;
-        this.stroke = 5;
-        this.color=Color.yellow;
+        this(230,30,140,5,Color.yellow);
     }
 
-    @Override
-    public void draw(Graphics g) {
-        Rectangle r = new Rectangle(this.x,this.y,this.size,this.size,this.stroke,this.color);
-        r.draw(g);
+    public Square(int x, int y, int size, int stroke, Color color) {
+        super(x, y, size, size, stroke, color);
     }
+
 }

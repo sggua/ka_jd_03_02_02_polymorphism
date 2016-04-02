@@ -2,31 +2,29 @@ package im.sgg.ka.jd.shapes;
 
 import java.awt.*;
 
-/**
- * Created by sergiy on 23.03.16.
- * Java Developer lessons
- * kademika.com
- */
-public class Rectangle extends Shape {
-    private int x, y, sizeX, sizeY,  stroke;
-    private Color color=Color.green;
+public class Rectangle extends AbstractShape {
 
     public Rectangle() {
-        this.x = 210;
-        this.y = 195;
-        this.sizeX = 180;
-        this.sizeY = 140;
-        this.stroke = 5;
-        this.color = Color.green;
+        this(210, 195, 180, 140, 5, Color.green);
     }
 
-    protected Rectangle(int x, int y, int sizeX, int sizeY, int stroke, Color color) {
+    public Rectangle(int x, int y, int sizeX, int sizeY, int stroke, Color color) {
         this.x = x;
         this.y = y;
         this.sizeX = sizeX;
         this.sizeY = sizeY;
         this.stroke = stroke;
         this.color = color;
+    }
+
+    @Override
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    @Override
+    public Color getColor() {
+        return this.color;
     }
 
     @Override

@@ -2,24 +2,43 @@ package im.sgg.ka.jd.shapes;
 
 import java.awt.*;
 
-/**
- * Created by sergiy on 23.03.16.
- * Java Developer lessons
- * kademika.com
- */
-public class Triangle extends Shape {
+public class Triangle extends AbstractShape {
+
+    public Triangle() {
+        this(420,250,140,5,Color.blue);
+    }
+
+    public Triangle(int x, int y, int size, int stroke, Color color) {
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.stroke = stroke;
+        this.color = color;
+    }
+
+    @Override
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    @Override
+    public Color getColor() {
+        return this.color;
+    }
 
     @Override
     public void draw(Graphics g){
-        int x=420, y=250, size=140, stroke=5;
 
         Graphics2D g2 = (Graphics2D) g;
         g2.setStroke(new BasicStroke((float) 5));
-        g2.setColor(Color.blue);
-        g2.drawPolygon(new int[]{x,x+size/2,x+size},new int[]{y,y-size,y},3);
+        g2.setColor(this.getColor());
+        g2.drawPolygon(
+                new int[]{this.x,this.x+this.size/2,this.x+this.size},
+                new int[]{this.y,this.y-this.size,this.y},3
+        );
         g2.fillPolygon(
-                new int[]{x+(int)(stroke*3.5),x+size/2,x+size-(int)(stroke*3.5)},
-                new int[]{y-stroke*2,y-size+stroke*5,y-stroke*2},3
+                new int[]{this.x+(int)(this.stroke*3.5),this.x+this.size/2,this.x+this.size-(int)(this.stroke*3.5)},
+                new int[]{this.y-this.stroke*2,this.y-this.size+this.stroke*5,this.y-this.stroke*2},3
         );
 
     }
