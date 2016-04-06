@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
-public class ShapesTemplate extends JPanel {
+public class ShapesTemplate extends JPanel implements Drawble {
 
     private AbstractShape[] shapes;
 
@@ -32,5 +32,10 @@ public class ShapesTemplate extends JPanel {
         for (AbstractShape s : shapes) {
             s.draw(g);
         }
+    }
+
+    @Override
+    public void draw(Graphics g) {
+
     }
 }

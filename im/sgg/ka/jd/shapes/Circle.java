@@ -31,7 +31,7 @@ public class Circle extends AbstractShape {
 
         Graphics2D g2 = (Graphics2D) g;
         g2.setStroke(new BasicStroke((float) stroke));
-        g2.setColor(this.getColor());
+        g2.setColor(this.color);
         g2.drawOval(this.x,this.y,this.size,this.size);
         g2.fillOval(this.x+this.stroke*2,    this.y+this.stroke*2,
                     this.size-this.stroke*4, this.size-this.stroke*4);
