@@ -2,7 +2,7 @@ package im.sgg.ka.jd.shapes;
 
 import java.awt.*;
 
-public abstract class AbstractShape implements Drawble{
+public abstract class AbstractShape implements Drawable {
     protected int x,y,size,sizeX,sizeY,stroke;
     protected Color color;
 

@@ -7,6 +7,6 @@ import java.awt.*;
  * Java Developer lessons
  * kademika.com
  */
-public interface Drawble {
+public interface Drawable {
     void draw(Graphics g);
 }
